@@ -56,7 +56,7 @@ public class TestPedido
         }
         else
         {
-            System.out.print("El pedido 2 se ha realizado antes que el pedido 1");
+            System.out.print("El pedido 1 se ha realizado después o el mismo día que el pedido 2");
         }
     }
     
