@@ -4,6 +4,7 @@
  *  
  *  @author Daniel Marín
  */
+
 public class Cliente
 {
     private String nombre;
@@ -14,7 +15,9 @@ public class Cliente
     /**
      * Constructor  
      */
-    public Cliente(String nombre, String direccion, String ciudad, String provincia)    {
+    
+    public Cliente(String nombre, String direccion, String ciudad, String provincia)
+    {
         this.nombre = nombre;
         this.direccion = direccion;
         this.ciudad = ciudad;
@@ -24,34 +27,43 @@ public class Cliente
     /**
      * accesor para el nombre del cliente
      */
-    public String getNombre() {
+    
+    public String getNombre()
+    {
         return nombre;
     }
 
     /**
      * accesor para la dirección del cliente
      */
-    public String getDireccion() {
+    
+    public String getDireccion()
+    {
         return direccion;
     }
 
     /**
      * accesor para la ciudad
      */
-    public String getCiudad() {
+    
+    public String getCiudad()
+    {
         return ciudad;
     }
 
     /**
      * accesor para la provincia
      */
-    public String getProvincia() {
+    
+    public String getProvincia()
+    {
         return provincia;
     }
 
     /**
      * representación textual del cliente
      */
+    
     public String toString()
     {
         return "";
@@ -60,8 +72,9 @@ public class Cliente
     /**
      * 
      */
-    public void print() {
+    
+    public void print()
+    {
         System.out.println(this.toString());
     }
-
 }

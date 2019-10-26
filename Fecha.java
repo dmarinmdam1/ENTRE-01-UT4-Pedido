@@ -1,7 +1,10 @@
+
 import java.time.LocalDate;
+
 /**
  *  Representa una fecha 
  */
+
 public class Fecha
 {
     private LocalDate date;
@@ -9,54 +12,66 @@ public class Fecha
     /**
      * Constructor  
      */
-    public Fecha(int dia, int mes, int year)    {
+    
+    public Fecha(int dia, int mes, int year)
+    {
         date = LocalDate.of(year, mes, dia);
     }
 
     /**
      * accesor para el día
      */
-    public int getDia() {
+    
+    public int getDia()
+    {
         return date.getDayOfMonth();
     }
 
     /**
      * accesor para el mes
      */
-    public int getMes() {
-        return date.getMonthValue() ;
+    
+    public int getMes()
+    {
+        return date.getMonthValue();
     }
 
     /**
      * accesor para el año
      */
-    public int getYear() {
-        return date.getYear() ;
+    
+    public int getYear()
+    {
+        return date.getYear();
     }
 
     /**
      * devuelve true si la fecha actual es más antigua (va antes) que la
      * recibida como parámetro
      */
-    public boolean antesQue(Fecha fecha) {
+    
+    public boolean antesQue(Fecha fecha)
+    {
         return this.date.isBefore(LocalDate.of(fecha.getYear(),
-                        fecha.getMes(), fecha.getDia()));
-
+                                  fecha.getMes(), fecha.getDia()));
     }
 
     /**
      * representación textual de la fecha
      */
-    public String toString() {
+    
+    public String toString()
+    {
         return date.getDayOfMonth() + "/" + date.getMonthValue() +  
         "/" + date.getYear();
-
     }
 
     /**
      * 
      */
-    public void print() {
+    
+    public void print()
+    {
         System.out.println(this.toString());
     }
 }

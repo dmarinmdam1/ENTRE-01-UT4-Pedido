@@ -1,5 +1,4 @@
 
-
 /**
  * Modela un pedido realizado por un cliente en una determinada fecha
  * El pedido incluye dos líneas de pedido que describen a cada uno de los dos
@@ -7,6 +6,7 @@
  * 
  * @author Daniel Marín
  */
+
 public class Pedido
 {
     private final double IVA = 0.21;  // iva a aplicar
@@ -18,13 +18,16 @@ public class Pedido
     /**
      * Constructor  
      */
-    public Pedido()    {
+    
+    public Pedido()
+    {
          
     }
 
     /**
      * accesor para la fecha del pedido
      */
+    
     public Fecha getFecha()
     {
          return fecha;
@@ -33,15 +36,16 @@ public class Pedido
     /**
      * accesor para el cliente
      */
+    
     public Cliente getCliente()
     {
          return cliente;
     }
     
-    
     /**
      * calcular y devolver el importe total del pedido sin Iva
      */
+    
     public double getImporteAntesIva()
     {
          return 0;
@@ -50,6 +54,7 @@ public class Pedido
     /**
      * calcular y devolver el iva a aplicar
      */
+    
     public double getIva()
     {
          return 0;
@@ -58,6 +63,7 @@ public class Pedido
     /**
      * calcular y devolver el importe total del pedido con Iva
      */
+    
     public double getImporteTotal()
     {
          return 0;
@@ -67,16 +73,17 @@ public class Pedido
      * Representación textual del pedido
      * (ver enunciado)
      */
+    
     public String toString()
     {
         return "";
     }
     
-    
     /**
      * devuelve true si el pedido actual es más antiguo que el recibido 
      * como parámetro
      */
+    
     public boolean masAntiguoQue(Pedido otro)
     {
          return false;
@@ -85,9 +92,9 @@ public class Pedido
      /**
      * devuelve una referencia al pedido actual
      */
+    
     public Pedido getPedidoActual()
     {
         return this;
     }
-
 }

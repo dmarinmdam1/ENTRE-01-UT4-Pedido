@@ -4,6 +4,7 @@
  *  
  *  @author Daniel Marín
  */
+
 public class TestPedido
 {
     private Pedido pedido1; 
@@ -12,23 +13,20 @@ public class TestPedido
     /**
      * Constructor  
      */
-    public TestPedido()    {
+    
+    public TestPedido()
+    {
         // crear pedido1
-       
-	   
-	   
-	   
-
+     
         // crear pedido2
-         
-
     }
 
     /**
      * Muestra la información de los dos pedidos (ver enunciado)
      */
-    public void mostrarPedidos() {
+    
+    public void mostrarPedidos()
+    {
         
-
     }
 }
