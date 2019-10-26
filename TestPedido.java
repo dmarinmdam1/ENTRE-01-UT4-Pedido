@@ -2,6 +2,7 @@
 /**
  *  Clase para probar el resto de clases
  *  
+ *  @author Daniel Marín
  */
 public class TestPedido
 {

@@ -1,6 +1,7 @@
 /**
- *  
  * Modela un producto. Todo producto tiene un nombre y un  precio unidad 
+ * 
+ * @author Daniel Marín
  */
 public class Producto
 {
@@ -30,18 +31,20 @@ public class Producto
     }
     
     /**
-     * obtiene un nuevo producto copia idéntica del actual
+     * Obtiene un nuevo producto copia idéntica del actual
      */
-    public         obtenerCopia() {
-         
+    public Producto obtenerCopia()
+    {
+         return new Producto("", 0);
     }
 
     /**
      * Representación textual de un producto
      * (ver enunciado)
      */
-    public String toString() {
-        
+    public String toString()
+    {
+        return "";
     }
 
 }

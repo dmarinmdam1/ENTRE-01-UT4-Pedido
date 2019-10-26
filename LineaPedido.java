@@ -4,6 +4,7 @@
  *  En una línea de pedido se incluye un producto
  *  y el nº de unidades compradas de ese producto
  *   
+ *  @author Daniel Marín
  */
 public class LineaPedido
 {
@@ -21,8 +22,9 @@ public class LineaPedido
      /**
      * accesor para el producto
      */
-    public     getProducto() {
-         
+    public Producto getProducto()
+    {
+        return producto;
     }
 
     /**
@@ -35,14 +37,16 @@ public class LineaPedido
     /**
      * obtiene una nueva línea de pedido copia idéntica de la actual
      */
-    public    obtenerCopia() {
-         
+    public Producto obtenerCopia()
+    {
+        return new Producto("", 0);
     }
      /**
      * Representación textual de la línea de pedido
      * (ver enunciado)
      */
-    public String toString() {
-        
+    public String toString()
+    {
+        return "";
     }
 }

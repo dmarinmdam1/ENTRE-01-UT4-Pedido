@@ -1,7 +1,8 @@
 
-
 /**
  *  Representa a un cliente que hace un pedido 
+ *  
+ *  @author Daniel Marín
  */
 public class Cliente
 {
@@ -51,9 +52,9 @@ public class Cliente
     /**
      * representación textual del cliente
      */
-    public String toString() {
-         
-          
+    public String toString()
+    {
+        return "";
     }
     
     /**
