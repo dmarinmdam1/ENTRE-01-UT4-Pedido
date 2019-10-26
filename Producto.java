@@ -44,7 +44,7 @@ public class Producto
     
     public Producto obtenerCopia()
     {
-         return new Producto("", 0);
+         return new Producto(nombre, precio);
     }
 
     /**
@@ -54,6 +54,14 @@ public class Producto
     
     public String toString()
     {
-        return "";
+        String returnString;
+        
+        returnString  = String.format("%30s | %8.2f€ unidad", nombre, precio);
+        
+        return returnString;
     }
 }
+
+
+
+

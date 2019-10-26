@@ -19,9 +19,12 @@ public class Pedido
      * Constructor  
      */
     
-    public Pedido()
+    public Pedido(Fecha fecha, Cliente cliente, LineaPedido linea1, LineaPedido linea2)
     {
-         
+         this.fecha = fecha;
+         this.cliente = cliente;
+         this.linea1 = linea1;
+         this.linea2 = linea2;
     }
 
     /**
@@ -48,7 +51,12 @@ public class Pedido
     
     public double getImporteAntesIva()
     {
-         return 0;
+        double importeAntesIva;
+        
+        importeAntesIva  = linea1.getProducto().getPrecio() * linea1.getCantidad();
+        importeAntesIva += linea2.getProducto().getPrecio() * linea2.getCantidad();
+        
+        return importeAntesIva;
     }
 
     /**
@@ -57,7 +65,7 @@ public class Pedido
     
     public double getIva()
     {
-         return 0;
+         return getImporteAntesIva() * IVA;
     }
 
     /**
@@ -66,7 +74,7 @@ public class Pedido
     
     public double getImporteTotal()
     {
-         return 0;
+         return getImporteAntesIva() + getIva();
     }
 
     /**
@@ -76,7 +84,19 @@ public class Pedido
     
     public String toString()
     {
-        return "";
+        String returnString;
+        
+        returnString  = String.format("FECHA PEDIDO: %s \n", fecha.toString());
+        returnString += String.format("DATOS DEL CLIENTE \n%s \n", cliente.toString());
+        
+        returnString += String.format("**** Artículos en el pedido **** \n\n%s\n%s\n\n", linea1.toString(), linea2.toString());
+        
+        returnString += String.format("**** A pagar **** \n\n");
+        returnString += String.format("%20s: %8.2f€\n", "IMPORTE SIN IVA", getImporteAntesIva());
+        returnString += String.format("%20s: %8.2f€\n",             "IVA", getIva());
+        returnString += String.format("%20s: %8.2f€\n",   "IMPORTE TOTAL", getImporteTotal());
+        
+        return returnString;
     }
     
     /**
@@ -86,7 +106,7 @@ public class Pedido
     
     public boolean masAntiguoQue(Pedido otro)
     {
-         return false;
+         return fecha.antesQue(otro.getFecha());
     }
     
      /**

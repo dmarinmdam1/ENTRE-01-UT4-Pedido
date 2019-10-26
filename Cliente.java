@@ -66,7 +66,14 @@ public class Cliente
     
     public String toString()
     {
-        return "";
+        String returnString;
+        
+        returnString  = String.format("%10s: %-10s \n",    "NOMBRE", nombre);
+        returnString += String.format("%10s: %-10s \n", "DIRECCION", direccion);
+        returnString += String.format("%10s: %-10s \n",    "CIUDAD", ciudad);
+        returnString += String.format("%10s: %-10s \n", "PROVINCIA", provincia);
+        
+        return returnString;
     }
     
     /**
