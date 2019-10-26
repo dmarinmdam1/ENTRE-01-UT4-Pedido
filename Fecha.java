@@ -2,24 +2,36 @@
 import java.time.LocalDate;
 
 /**
- *  Representa una fecha 
+ *  Clase que representa una fecha 
  */
 
 public class Fecha
 {
+    /** ------- Atributos ------- **/
+    
     private LocalDate date;
 
+    /** ------- Constructor ------- **/
+    
     /**
-     * Constructor  
+     * Constructor de la clase "Fecha"
+     * 
+     * @param dia Día para inicializar el atributo "date"
+     * @param mes Mes para inicializar el atributo "date"
+     * @param year Año para inicializar el atributo "date"
      */
     
     public Fecha(int dia, int mes, int year)
     {
         date = LocalDate.of(year, mes, dia);
     }
+    
+    /** ------- Métodos Accesores ------- **/
 
     /**
-     * accesor para el día
+     * Accesor para el atributo "dia"
+     * 
+     * @return El atributo "dia"
      */
     
     public int getDia()
@@ -28,7 +40,9 @@ public class Fecha
     }
 
     /**
-     * accesor para el mes
+     * Accesor para el atributo "mes"
+     * 
+     * @return El atributo "mes"
      */
     
     public int getMes()
@@ -37,7 +51,9 @@ public class Fecha
     }
 
     /**
-     * accesor para el año
+     * Accesor para el atributo "year"
+     * 
+     * @return El atributo "year"
      */
     
     public int getYear()
@@ -45,9 +61,15 @@ public class Fecha
         return date.getYear();
     }
 
+    /** ------- Métodos Varios ------- **/
+    
     /**
-     * devuelve true si la fecha actual es más antigua (va antes) que la
-     * recibida como parámetro
+     * Devuelve true si la fecha actual es más antigua
+     * (va antes) que la recibida como parámetro
+     * 
+     * @param fecha Objeto de tipo "Fecha" con el que comparar el atributo "fecha"
+     * @return true si la fecha actual es más antigua 
+     * (va antes) que la recibida como parámetro
      */
     
     public boolean antesQue(Fecha fecha)
@@ -56,8 +78,12 @@ public class Fecha
                                   fecha.getMes(), fecha.getDia()));
     }
 
+    /** ------- Método toString ------- **/
+    
     /**
-     * representación textual de la fecha
+     * Representación textual de la fecha
+     * 
+     * @return Representación textual de la fecha
      */
     
     public String toString()
@@ -66,12 +92,19 @@ public class Fecha
         "/" + date.getYear();
     }
 
+    /** ------- Método print ------- **/
+    
     /**
-     * 
+     * Imprime en pantalla el resultado del método "toString"
      */
     
     public void print()
     {
         System.out.println(this.toString());
     }
+    
+    /** ------- ------- ------- **/
 }
+
+
+

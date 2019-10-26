@@ -9,20 +9,31 @@
 
 public class LineaPedido
 {
-    private Producto producto;
-    private int cantidad;
+    /** ------- Atributos ------- **/
+    
+    private Producto producto; // Producto
+    private int cantidad; // Cantidad de ese producto
+    
+    /** ------- Constructor ------- **/
      
     /**
-     * Constructor  
+     * Constructor de la clase "LineaPedido" 
+     * 
+     * @param producto Valor (Producto) para el atributo "producto"
+     * @param cantidad Valor (int) para el atributo "cantidad"
      */
     public LineaPedido(Producto producto, int cantidad)
     {
          this.producto = producto;
          this.cantidad = cantidad;
     }
+    
+    /** ------- Métodos Accesores ------- **/
 
-     /**
-     * accesor para el producto
+    /**
+     * Accesor para el producto
+     * 
+     * @return El atributo "producto"
      */
     
     public Producto getProducto()
@@ -31,7 +42,9 @@ public class LineaPedido
     }
 
     /**
-     * accesor para la cantidad de producto
+     * Accesor para la cantidad de producto
+     * 
+     * @return El atributo "cantidad"
      */
     
     public int getCantidad()
@@ -39,8 +52,12 @@ public class LineaPedido
         return cantidad;
     }
     
+    /** ------- Métodos Varios ------- **/
+    
     /**
-     * obtiene una nueva línea de pedido copia idéntica de la actual
+     * Obtiene una nueva línea de pedido copia idéntica de la actual
+     * 
+     * @return Un nuevo objeto idéntico al actual
      */
     
     public LineaPedido obtenerCopia()
@@ -48,9 +65,13 @@ public class LineaPedido
         return new LineaPedido(new Producto(producto.getNombre(), producto.getPrecio()), cantidad);
     }
     
-     /**
+    /** ------- Método toString ------- **/
+    
+    /**
      * Representación textual de la línea de pedido
      * (ver enunciado)
+     * 
+     * @return Representación textual de la línea de pedido
      */
     
     public String toString()
@@ -62,4 +83,9 @@ public class LineaPedido
         
         return returnString;
     }
+    
+    /** ------- ------- ------- **/
 }
+
+
+

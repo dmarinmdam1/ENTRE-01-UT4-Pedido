@@ -7,23 +7,27 @@
 
 public class TestPedido
 {
-    private Pedido pedido1; 
-    private Pedido pedido2; 
+    /** ------- Atributos ------- **/
+    
+    private Pedido pedido1; // Pedido test 1
+    private Pedido pedido2; // Pedido test 2
+    
+    /** ------- Constructor ------- **/
 
     /**
-     * Constructor  
+     * Constructor de la clase "TestPedido"
      */
     
     public TestPedido()
     {
-        pedido1 = new Pedido( 
+        pedido1 = new Pedido( // Inicializa "pedido1"
                               new Fecha(4,9,2019),
                               new Cliente("Juan Soto", "Avda. Pio XII", "Pamplona", "Navarra"),
                               new LineaPedido(new Producto("Rotulador fosforescente", 6.7), 20),
                               new LineaPedido(new Producto("Memoria USB 64GB", 14.8), 10)
                             );
      
-        pedido2 = new Pedido( 
+        pedido2 = new Pedido( // Inicializa "pedido2"
                               new Fecha(8,10,2019),
                               new Cliente("Elisa Nuin", "C/ Río Alzania 7", "Pamplona", "Navarra"),
                               new LineaPedido(new Producto("Sacapuntas manual", 16.64), 8),
@@ -31,6 +35,8 @@ public class TestPedido
                             );
     }
 
+    /** ------- Método print ------- **/
+    
     /**
      * Muestra la información de los dos pedidos (ver enunciado)
      */
@@ -53,4 +59,9 @@ public class TestPedido
             System.out.print("El pedido 2 se ha realizado antes que el pedido 1");
         }
     }
+    
+    /** ------- ------- ------- **/
 }
+
+
+

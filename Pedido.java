@@ -9,14 +9,26 @@
 
 public class Pedido
 {
+    /** ------- Constantes ------- **/
+    
     private final double IVA = 0.21;  // iva a aplicar
-    private Fecha fecha;
-    private Cliente cliente;
-    private LineaPedido linea1;
-    private LineaPedido linea2;
+    
+    /** ------- Atributos ------- **/
+    
+    private Fecha fecha; // Fecha del pedido
+    private Cliente cliente; // Cliente que ha realizado el pedido
+    private LineaPedido linea1; // Linea 1 del pedido
+    private LineaPedido linea2; // Linea 2 del pedido
+    
+    /** ------- Constructor ------- **/
 
     /**
-     * Constructor  
+     * Constructor de la clase "Pedido"
+     * 
+     * @param fecha Valor (Fecha) para el atributo "fecha"
+     * @param cliente Valor (Cliente) para el atributo "cliente"
+     * @param linea1 Valor (LineaPedido) para el atributo "linea1"
+     * @param linea2 Valor (LineaPedido) para el atributo "linea2"
      */
     
     public Pedido(Fecha fecha, Cliente cliente, LineaPedido linea1, LineaPedido linea2)
@@ -27,8 +39,12 @@ public class Pedido
          this.linea2 = linea2;
     }
 
+    /** ------- Métodos Accesores ------- **/
+    
     /**
-     * accesor para la fecha del pedido
+     * Accesor para la fecha del pedido
+     * 
+     * @return El atributo "fecha"
      */
     
     public Fecha getFecha()
@@ -37,7 +53,9 @@ public class Pedido
     }
 
     /**
-     * accesor para el cliente
+     * Accesor para el cliente
+     * 
+     * @return El atributo "cliente"
      */
     
     public Cliente getCliente()
@@ -45,8 +63,12 @@ public class Pedido
          return cliente;
     }
     
+    /** ------- Métodos de Cálculo ------- **/
+    
     /**
-     * calcular y devolver el importe total del pedido sin Iva
+     * Calcular y devolver el importe total del pedido sin Iva
+     * 
+     * @return El importe total del pedido sin Iva
      */
     
     public double getImporteAntesIva()
@@ -60,7 +82,9 @@ public class Pedido
     }
 
     /**
-     * calcular y devolver el iva a aplicar
+     * Calcular y devolver el iva a aplicar
+     * 
+     * @return El iva a aplicar
      */
     
     public double getIva()
@@ -69,7 +93,9 @@ public class Pedido
     }
 
     /**
-     * calcular y devolver el importe total del pedido con Iva
+     * Calcular y devolver el importe total del pedido con Iva
+     * 
+     * @return El importe total del pedido con Iva
      */
     
     public double getImporteTotal()
@@ -77,17 +103,21 @@ public class Pedido
          return getImporteAntesIva() + getIva();
     }
 
+    /** ------- Método toString ------- **/
+    
     /**
      * Representación textual del pedido
      * (ver enunciado)
+     * 
+     * @return Representación textual del pedido
      */
     
     public String toString()
     {
         String returnString;
         
-        returnString  = String.format("FECHA PEDIDO: %s \n", fecha.toString());
-        returnString += String.format("DATOS DEL CLIENTE \n%s \n", cliente.toString());
+        returnString  = String.format("FECHA PEDIDO: %s \n", fecha.toString()); // También se puede utilizar el método "fecha.print()"
+        returnString += String.format("DATOS DEL CLIENTE \n%s \n", cliente.toString()); // También se puede utilizar el método "cliente.print()"
         
         returnString += String.format("**** Artículos en el pedido **** \n\n%s\n%s\n\n", linea1.toString(), linea2.toString());
         
@@ -99,9 +129,14 @@ public class Pedido
         return returnString;
     }
     
+    /** ------- Métodos Varios ------- **/
+    
     /**
-     * devuelve true si el pedido actual es más antiguo que el recibido 
-     * como parámetro
+     * Devuelve true si el pedido actual es más
+     * antiguo que el recibido como parámetro
+     * 
+     * @return True si el pedido actual es más
+     * antiguo que el recibido como parámetro
      */
     
     public boolean masAntiguoQue(Pedido otro)
@@ -109,12 +144,19 @@ public class Pedido
          return fecha.antesQue(otro.getFecha());
     }
     
-     /**
-     * devuelve una referencia al pedido actual
+    /**
+     * Devuelve una referencia al pedido actual
+     * 
+     * @return Una referencia al pedido actual
      */
     
     public Pedido getPedidoActual()
     {
         return this;
     }
+    
+    /** ------- ------- ------- **/
 }
+
+
+
